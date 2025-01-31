@@ -39,7 +39,7 @@ impl TitleScreen {
         clear_background(BLACK);
 
         draw_text("cell_machine_mystic_mod.rs", 128.0, 128.0, 64.0, YELLOW);
-        draw_text("Alpha v0.1.3", 128.0, 192.0, 32.0, GRAY);
+        draw_text("Alpha v0.1.4 Suuuuper Buggy!", 128.0, 192.0, 32.0, GRAY);
         for (i, _option) in self.options.iter().enumerate() {
             let color = if i as i32 == self.selected { WHITE } else { GRAY };
             let text = if i as i32 == self.selected { format!("> {}", self.options_translations[i]) } else { self.options_translations[i].clone() };

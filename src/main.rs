@@ -7,7 +7,7 @@ mod widgets;
 
 fn window_conf() -> Conf {
     Conf {
-        window_title: "CellMachineMysticMod.rs".to_string(),
+        window_title: "cell_machine_mystic_mod.rs".to_string(),
         window_width: 1600,
         window_height: 900,
         ..Default::default()
@@ -20,7 +20,7 @@ async fn game_loop() {
     let mut tick = 0;
     loop {
         game_screen.update(tick).await;
-        game_screen.draw(tick);
+        game_screen.draw(tick).await;
 
         tick += 1;
         next_frame().await
